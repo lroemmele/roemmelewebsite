@@ -895,7 +895,55 @@ var App = function (_Component) {
                return _react2.default.createElement(
                     'div',
                     null,
-                    'React App'
+                    _react2.default.createElement(
+                         'div',
+                         { className: 'card' },
+                         _react2.default.createElement('img', { src: '/images/profilepic.jpg', alt: 'Luke', style: { "width": "100%" } }),
+                         _react2.default.createElement(
+                              'h1',
+                              null,
+                              'Luke Roemmele'
+                         ),
+                         _react2.default.createElement(
+                              'p',
+                              { className: 'title' },
+                              'Entry Level Develper'
+                         ),
+                         _react2.default.createElement(
+                              'p',
+                              null,
+                              'University of Phoenix'
+                         ),
+                         _react2.default.createElement(
+                              'a',
+                              { href: '#' },
+                              _react2.default.createElement('i', { className: 'fa fa-dribbble' })
+                         ),
+                         _react2.default.createElement(
+                              'a',
+                              { href: '#' },
+                              _react2.default.createElement('i', { className: 'fa fa-twitter' })
+                         ),
+                         _react2.default.createElement(
+                              'a',
+                              { href: '#' },
+                              _react2.default.createElement('i', { className: 'fa fa-linkedin' })
+                         ),
+                         _react2.default.createElement(
+                              'a',
+                              { href: '#' },
+                              _react2.default.createElement('i', { className: 'fa fa-facebook' })
+                         ),
+                         _react2.default.createElement(
+                              'p',
+                              null,
+                              _react2.default.createElement(
+                                   'button',
+                                   null,
+                                   'Contact'
+                              )
+                         )
+                    )
                );
           }
      }]);
