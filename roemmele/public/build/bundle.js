@@ -892,7 +892,8 @@ var App = function (_Component) {
           var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
           _this.state = {
-               render: ''
+               render: null,
+               contact: ''
           };
           return _this;
      }
@@ -900,9 +901,17 @@ var App = function (_Component) {
      _createClass(App, [{
           key: 'handleClick',
           value: function handleClick(e) {
-               this.setState({
-                    render: _react2.default.createElement(_contactInfo2.default, null)
-               });
+               if (this.state.render == null) {
+                    this.setState({
+                         render: true,
+                         contact: _react2.default.createElement(_contactInfo2.default, null)
+                    });
+               } else {
+                    this.setState({
+                         render: null,
+                         contact: ''
+                    });
+               }
           }
      }, {
           key: 'render',
@@ -959,7 +968,7 @@ var App = function (_Component) {
                                    'Contact'
                               )
                          ),
-                         this.state.render
+                         this.state.contact
                     )
                );
           }

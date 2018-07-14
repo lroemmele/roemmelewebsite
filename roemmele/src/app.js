@@ -6,15 +6,25 @@ class App extends Component {
      constructor(){
           super();
           this.state = {
-               render:''
+               render:null,
+               contact: ''
           }
      }
 
 
      handleClick(e){
-          this.setState({
-               render: <Contact/>
-          })
+          if (this.state.render == null){
+               this.setState({
+                    render: true,
+                    contact: <Contact/>
+               })
+          }else{
+               this.setState({
+                    render:null,
+                    contact:''
+               })
+          }
+
      }
 
      render(){
@@ -36,7 +46,8 @@ class App extends Component {
                          <p><button className="btn btn-primary"  type="button"
                          onClick={this.handleClick.bind(this)}>Contact</button></p>
 
-                         {this.state.render}
+                         {this.state.contact}
+
                     </div>
                </div>
           );
