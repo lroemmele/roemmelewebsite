@@ -871,6 +871,10 @@ var _reactDom = __webpack_require__(16);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _contactInfo = __webpack_require__(25);
+
+var _contactInfo2 = _interopRequireDefault(_contactInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -885,13 +889,25 @@ var App = function (_Component) {
      function App() {
           _classCallCheck(this, App);
 
-          return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+          var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+          _this.state = {
+               render: ''
+          };
+          return _this;
      }
 
      _createClass(App, [{
+          key: 'handleClick',
+          value: function handleClick(e) {
+               this.setState({
+                    render: _react2.default.createElement(_contactInfo2.default, null)
+               });
+          }
+     }, {
           key: 'render',
           value: function render() {
-               console.log("in react");
+
                return _react2.default.createElement(
                     'div',
                     null,
@@ -915,19 +931,18 @@ var App = function (_Component) {
                               'University of Phoenix'
                          ),
                          _react2.default.createElement(
-                              'a',
-                              { href: '#' },
-                              _react2.default.createElement('i', { className: 'fa fa-dribbble' })
+                              'form',
+                              { method: 'get', action: 'assets/New Resume.docx' },
+                              _react2.default.createElement(
+                                   'button',
+                                   { className: 'btn btn-success', type: 'submit button' },
+                                   'Download Resume'
+                              )
                          ),
                          _react2.default.createElement(
                               'a',
-                              { href: '#' },
-                              _react2.default.createElement('i', { className: 'fa fa-twitter' })
-                         ),
-                         _react2.default.createElement(
-                              'a',
-                              { href: '#' },
-                              _react2.default.createElement('i', { className: 'fa fa-linkedin' })
+                              { href: 'https://www.linkedin.com/in/luke-roemmele-b9716465/' },
+                              _react2.default.createElement('i', { className: 'fa fa-linkedin', style: { "margin": "10px" } })
                          ),
                          _react2.default.createElement(
                               'a',
@@ -939,10 +954,12 @@ var App = function (_Component) {
                               null,
                               _react2.default.createElement(
                                    'button',
-                                   null,
+                                   { className: 'btn btn-primary', type: 'button',
+                                        onClick: this.handleClick.bind(this) },
                                    'Contact'
                               )
-                         )
+                         ),
+                         this.state.render
                     )
                );
           }
@@ -20437,6 +20454,81 @@ function camelize(string) {
 }
 
 module.exports = camelize;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+     value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contact = function (_Component) {
+     _inherits(Contact, _Component);
+
+     function Contact() {
+          _classCallCheck(this, Contact);
+
+          return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+     }
+
+     _createClass(Contact, [{
+          key: "render",
+          value: function render() {
+               return _react2.default.createElement(
+                    "div",
+                    null,
+                    _react2.default.createElement(
+                         "ul",
+                         { style: { "listStyle": "none", "paddingLeft": "0" } },
+                         _react2.default.createElement(
+                              "li",
+                              null,
+                              _react2.default.createElement(
+                                   "a",
+                                   { href: "tel:[267-893-0426]" },
+                                   _react2.default.createElement(
+                                        "span",
+                                        { className: "bottom" },
+                                        "267-893-0426"
+                                   )
+                              )
+                         ),
+                         _react2.default.createElement(
+                              "li",
+                              null,
+                              _react2.default.createElement(
+                                   "a",
+                                   { href: "mailto:lroemmele@gmail.com" },
+                                   " lroemmele@gmail.com "
+                              )
+                         )
+                    )
+               );
+          }
+     }]);
+
+     return Contact;
+}(_react.Component);
+
+exports.default = Contact;
 
 /***/ })
 /******/ ]);
