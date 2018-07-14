@@ -956,7 +956,12 @@ var App = function (_Component) {
                          _react2.default.createElement(
                               'a',
                               { href: '#' },
-                              _react2.default.createElement('i', { className: 'fa fa-facebook' })
+                              _react2.default.createElement('i', { className: 'fa fa-facebook', style: { "margin": "10px" } })
+                         ),
+                         _react2.default.createElement(
+                              'a',
+                              { href: 'https://github.com/lroemmele' },
+                              _react2.default.createElement('i', { className: 'fa fa-github', style: { "margin": "10px" } })
                          ),
                          _react2.default.createElement(
                               'p',

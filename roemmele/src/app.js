@@ -42,7 +42,8 @@ class App extends Component {
                          </form>
 
                          <a href="https://www.linkedin.com/in/luke-roemmele-b9716465/"><i className="fa fa-linkedin" style={{"margin" : "10px"}}></i></a>
-                         <a href="#"><i className="fa fa-facebook"></i></a>
+                         <a href="#"><i className="fa fa-facebook" style={{"margin" : "10px"}}></i></a>
+                         <a href="https://github.com/lroemmele"><i className="fa fa-github" style={{"margin" : "10px"}}></i></a>
                          <p><button className="btn btn-primary"  type="button"
                          onClick={this.handleClick.bind(this)}>Contact</button></p>
 
